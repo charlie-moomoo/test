@@ -1,12 +1,7 @@
-<input value="你沒有驗證碼可以複製耶" style="display:none;"/><button class="copy_coupon">【123456】點擊複製數字</button>
+<input id="copy" value="你沒有驗證碼可以複製耶" style="display:none;"/><button class="copy_coupon">點擊複製你的驗證碼</button>
 <script>
-  var dummy = document.createElement('input'),text =location.search.substr(12); 
-  document.body.appendChild(dummy);
-  dummy.value = text;dummy.select();
-  document.execCommand('copy');
-  document.body.removeChild(dummy);
-  window.opener=null;
-  window.close();
+var copything = location.search.substr(12);
+document.getElementById('copy').value=copything;
 </script>
 
 
